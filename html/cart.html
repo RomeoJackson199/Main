@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart - EnergyMax</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EnergyMax</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cart-summary">
+            <h1>Your Cart</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Energy Drink Alpha</td>
+                        <td>$2.99</td>
+                        <td><input type="number" value="2" min="1"></td>
+                        <td>$5.98</td>
+                        <td><button>Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>Focus Boost Max</td>
+                        <td>$3.49</td>
+                        <td><input type="number" value="1" min="1"></td>
+                        <td>$3.49</td>
+                        <td><button>Remove</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" style="text-align:right;"><strong>Subtotal:</strong></td>
+                        <td>$9.47</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="cart-actions">
+                <a href="checkout.html" class="button-style">Proceed to Checkout</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 EnergyMax</p>
+    </footer>
+</body>
+</html>

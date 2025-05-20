@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - EnergyMax</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EnergyMax</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="checkout-form">
+            <h1>Complete Your Order</h1>
+            <form>
+                <fieldset>
+                    <legend>Shipping Address</legend>
+                    <div>
+                        <label for="shipping_fullname">Full Name</label>
+                        <input type="text" id="shipping_fullname" name="shipping_fullname" required>
+                    </div>
+                    <div>
+                        <label for="shipping_address1">Address Line 1</label>
+                        <input type="text" id="shipping_address1" name="shipping_address1" required>
+                    </div>
+                    <div>
+                        <label for="shipping_address2">Address Line 2 (Optional)</label>
+                        <input type="text" id="shipping_address2" name="shipping_address2">
+                    </div>
+                    <div>
+                        <label for="shipping_city">City</label>
+                        <input type="text" id="shipping_city" name="shipping_city" required>
+                    </div>
+                    <div>
+                        <label for="shipping_postalcode">Postal Code</label>
+                        <input type="text" id="shipping_postalcode" name="shipping_postalcode" required>
+                    </div>
+                    <div>
+                        <label for="shipping_country">Country</label>
+                        <input type="text" id="shipping_country" name="shipping_country" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Billing Address</legend>
+                    <div>
+                        <input type="checkbox" id="sameAsShipping" name="sameAsShipping">
+                        <label for="sameAsShipping">Same as Shipping</label>
+                    </div>
+                    <div class="billing-address-fields">
+                        <div>
+                            <label for="billing_fullname">Full Name</label>
+                            <input type="text" id="billing_fullname" name="billing_fullname">
+                        </div>
+                        <div>
+                            <label for="billing_address1">Address Line 1</label>
+                            <input type="text" id="billing_address1" name="billing_address1">
+                        </div>
+                        <div>
+                            <label for="billing_city">City</label>
+                            <input type="text" id="billing_city" name="billing_city">
+                        </div>
+                        <div>
+                            <label for="billing_postalcode">Postal Code</label>
+                            <input type="text" id="billing_postalcode" name="billing_postalcode">
+                        </div>
+                        <div>
+                            <label for="billing_country">Country</label>
+                            <input type="text" id="billing_country" name="billing_country">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Payment Method</legend>
+                    <div>
+                        <input type="radio" id="payment_card" name="payment_method" value="card" checked>
+                        <label for="payment_card">Credit Card</label>
+                    </div>
+                    <div class="credit-card-fields">
+                        <div>
+                            <label for="card_number">Card Number</label>
+                            <input type="text" id="card_number" name="card_number" placeholder="XXXX XXXX XXXX XXXX">
+                        </div>
+                        <div>
+                            <label for="card_expiry">Expiry Date</label>
+                            <input type="text" id="card_expiry" name="card_expiry" placeholder="MM/YY">
+                        </div>
+                        <div>
+                            <label for="card_cvv">CVV</label>
+                            <input type="text" id="card_cvv" name="card_cvv" placeholder="XXX">
+                        </div>
+                    </div>
+                    <div>
+                        <input type="radio" id="payment_paypal" name="payment_method" value="paypal">
+                        <label for="payment_paypal">PayPal</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Order Summary</legend>
+                    <div id="order-summary-content">
+                        <p>Your order total is: [Total Amount]</p>
+                        <!-- Items will be listed here by JavaScript -->
+                    </div>
+                </fieldset>
+
+                <button type="submit" id="place-order-btn" class="button-style">Place Order</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 EnergyMax</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,235 @@
+/* 1. General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container { /* This class can be added to main content wrappers in HTML later if needed */
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* 2. Header & Navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: #007bff 3px solid;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+header .logo { /* Assuming you'll wrap the logo text in a div/span with class logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* 3. Main Content Area */
+main {
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 4. Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* 5. Forms (Basic Styling for Checkout) */
+form fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+form legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea {
+    width: calc(100% - 22px); /* Adjust width if box-sizing is not border-box */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button[type="submit"],
+.button-style {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button[type="submit"]:hover,
+.button-style:hover {
+    background: #0056b3;
+}
+
+/* 6. Product Grid (for products.html) */
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-item { /* This class would be added to the product divs on products.html */
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.product-item img {
+    margin-bottom: 10px;
+    max-height: 150px; /* Or a fixed height */
+}
+
+.product-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-item .price {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-item a.button-style { /* For View Details button */
+    display: inline-block;
+}
+
+/* 7. Product Detail Page (product_detail.html) */
+#product-view {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#product-view .product-image-column { /* Class for the div containing the large image */
+    flex: 1;
+    min-width: 300px;
+}
+
+#product-view .product-info-column { /* Class for the div containing product details */
+    flex: 2;
+    min-width: 300px;
+}
+
+#product-view .product-info-column .price {
+    font-size: 1.5rem;
+    color: #E91E63; /* A distinct color for emphasis */
+    margin-bottom: 15px;
+}
+
+#product-view .product-info-column .description {
+    margin-bottom: 15px;
+}
+
+#product-view .product-info-column input[type="number"] {
+    width: 60px;
+    margin-right: 10px;
+}
+
+#product-view .product-info-column button#add-to-cart-btn {
+    margin-top: 10px;
+}
+
+/* 8. Cart Page (cart.html) */
+#cart-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#cart-summary th,
+#cart-summary td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#cart-summary th {
+    background-color: #f0f0f0;
+}
+
+#cart-summary input[type="number"] {
+    width: 60px;
+}
+
+#cart-summary tfoot td {
+    font-weight: bold;
+}
+
+.cart-actions { /* Class for div containing checkout button */
+    text-align: right;
+    margin-top: 20px;
+}

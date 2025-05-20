@@ -1,0 +1,18 @@
+```mermaid
+graph TD
+  user((User))
+  mobile(Mobile App)
+  web(Web App)
+  server(Edge Functions)
+  supabase[(Supabase)]
+  openai((OpenAI GPT-4o))
+
+  user --> mobile
+  user --> web
+  mobile -- realtime / auth --> supabase
+  web -- realtime / auth --> supabase
+  mobile -- parse request --> server
+  server -- store / realtime --> supabase
+  server -- AI call --> openai
+  supabase <--> server
+```

@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "Snap-n-Split",
+    "slug": "snap-n-split",
+    "plugins": ["expo-router"],
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.0"
+  }
+}

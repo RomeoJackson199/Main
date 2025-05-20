@@ -1,0 +1,39 @@
+```mermaid
+classDiagram
+  class users {
+    id uuid PK
+    email text
+    display_name text
+    avatar_url text
+    created_at timestamptz
+  }
+  class receipts {
+    id uuid PK
+    owner_id uuid FK -> users.id
+    image_url text
+    parsed_json jsonb
+    created_at timestamptz
+  }
+  class bill_shares {
+    id uuid PK
+    receipt_id uuid FK -> receipts.id
+    inviter_id uuid FK -> users.id
+    invitee_email text
+    role text
+    status text
+  }
+  class line_items {
+    id uuid PK
+    receipt_id uuid FK -> receipts.id
+    name text
+    qty int
+    unit_price numeric
+    total_price numeric
+  }
+  class item_assignments {
+    id uuid PK
+    line_item_id uuid FK -> line_items.id
+    user_id uuid FK -> users.id
+    share numeric
+  }
+```

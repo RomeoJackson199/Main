@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "snap-n-split",
+  "packageManager": "pnpm@8.6.0",
+  "scripts": {
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "format": "prettier --write .",
+    "typecheck": "tsc -b",
+    "test": "turbo test",
+    "dev": "turbo run dev",
+    "build": "turbo run build"
+  },
+  "workspaces": [
+    "apps/mobile",
+    "apps/web",
+    "packages/*",
+    "server"
+  ],
+  "devDependencies": {
+    "eslint": "^8.59.0",
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.2",
+    "typescript": "^5.2.2"
+  }
+}

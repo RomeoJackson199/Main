@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dental Practice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Our Dental Practice</h1>
+  <p>Welcome to our clinic. We provide comprehensive dental care.</p>
+  <button id="bookBtn">Book an Appointment</button>
+</div>
+
+<div id="formContainer" class="hidden">
+  <form id="appointmentForm">
+    <h2>Book Appointment</h2>
+    <label>First Name<input type="text" name="firstName" required></label>
+    <label>Last Name<input type="text" name="lastName" required></label>
+    <label>Email<input type="email" name="email" required></label>
+    <label>Date<input type="date" name="date" required></label>
+    <label>Time<select name="time" required>
+      <option value="09:00">09:00</option>
+      <option value="10:00">10:00</option>
+      <option value="11:00">11:00</option>
+      <option value="14:00">14:00</option>
+      <option value="15:00">15:00</option>
+    </select></label>
+    <label><input type="checkbox" name="returning" id="returning"> I've been here before</label>
+    <label id="phoneLabel" class="hidden">Phone<input type="tel" name="phone"></label>
+    <button type="submit">Book</button>
+  </form>
+</div>
+
+<div id="reasonContainer" class="hidden">
+  <form id="reasonForm">
+    <h2>Why do you want to come today?</h2>
+    <textarea name="reason" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div id="thankyou" class="hidden">
+  <h2>Thank you, we'll be in touch shortly.</h2>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
